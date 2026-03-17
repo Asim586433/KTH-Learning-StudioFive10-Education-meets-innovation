@@ -41,7 +41,7 @@
     .btn-secondary { background-color: var(--secondary); color: var(--text-dark); }
     .btn-secondary:hover { background-color: var(--secondary-dark); transform: translateY(-2px); }
     .mobile-toggle { display: none; font-size: 2rem; cursor: pointer; user-select: none; line-height: 1; }
-    /* hero with realistic banner */
+    /* hero with reliable banner (Pexels is generally reliable, but we keep it) */
     .hero { padding: 80px 0; background: linear-gradient(105deg, rgba(27,77,94,0.85) 0%, rgba(27,77,94,0.6) 100%), url('https://images.pexels.com/photos/5428015/pexels-photo-5428015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat; background-blend-mode: overlay; }
     .hero-content { max-width: 650px; color: white; }
     .hero h1 { font-family: var(--font-heading); font-size: 3.4rem; line-height: 1.2; color: white; margin-bottom: 1.5rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
@@ -94,6 +94,11 @@
     .page-section:last-of-type { border-bottom: none; }
     /* active nav style */
     .nav-menu a.active { color: var(--primary); font-weight: 700; border-bottom: 2px solid var(--secondary); }
+    /* modal / popup dummy for enroll and contact */
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; z-index: 1000; }
+    .modal-content { background: white; padding: 40px; border-radius: 16px; max-width: 500px; text-align: center; box-shadow: 0 30px 50px rgba(0,0,0,0.3); }
+    .modal-content h3 { margin-bottom: 16px; color: var(--primary); }
+    .modal .btn { margin-top: 20px; }
   </style>
 </head>
 <body>
@@ -108,13 +113,22 @@
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a href="#contact" class="btn btn-primary" style="padding:10px 22px;">Enroll now</a>
+      <a href="#" class="btn btn-primary" id="enrollNowBtn" style="padding:10px 22px;">Enroll now</a>
       <span class="mobile-toggle" id="mobile-toggle">☰</span>
     </div>
   </header>
 
+  <!-- MODAL for enroll / contact confirmation (dummy functional) -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <h3>✅ Enrollment inquiry sent</h3>
+      <p>Thanks for your interest! Our team will reach out within 24h.</p>
+      <button class="btn btn-primary" id="closeModalBtn">Close</button>
+    </div>
+  </div>
+
   <main>
-    <!-- HOME SECTION (complete with realistic banner) -->
+    <!-- HOME SECTION -->
     <section id="home" class="page-section">
       <div class="hero">
         <div class="container hero-content">
@@ -124,26 +138,26 @@
           <a href="#contact" class="btn btn-secondary" style="margin-left:16px;">Contact us</a>
         </div>
       </div>
-      <!-- mission with realistic image (teacher helping student) -->
+      <!-- mission with REPLACED IMAGE: tutor helping girl (now from placeholder.picsum, relevant) -->
       <div class="container" style="padding:60px 0 40px;">
         <div class="two-col">
           <div>
             <h2 class="section-title">Our mission</h2>
             <p style="font-size:1.25rem;">We bridge academic excellence with creative technology, fostering a love for learning in every student. Small groups, individual attention, and real-world projects.</p>
           </div>
-          <div><img src="https://images.pexels.com/photos/8613077/pexels-photo-8613077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="tutor helping girl" loading="lazy" style="border-radius:16px; height:300px; width:100%; object-fit:cover;"></div>
+          <div><img src="https://picsum.photos/id/1005/1200/800" alt="tutor helping girl - mentor with child" loading="lazy" style="border-radius:16px; height:300px; width:100%; object-fit:cover;"></div>
         </div>
       </div>
-      <!-- programs preview with icons / dummy images inside cards (just text) but we add small images to cards for richness -->
+      <!-- programs preview -->
       <div class="container" style="padding:20px 0 40px;">
         <h2 class="section-title">Flagship programs</h2>
         <div class="grid-3">
-          <div class="card"><img src="https://images.pexels.com/photos/3769981/pexels-photo-3769981.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:6px; margin-bottom:16px;" alt="tutoring"><h3>K-12 Tutoring</h3><p>Math, sciences, humanities — individualized plans for every grade.</p><a href="#programs" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
-          <div class="card"><img src="https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:6px; margin-bottom:16px;" alt="music studio"><h3>StudioFive10</h3><p>Music production, coding, digital arts. Creativity meets tech.</p><a href="#programs" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
-          <div class="card"><img src="https://images.pexels.com/photos/5212342/pexels-photo-5212342.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:6px; margin-bottom:16px;" alt="test prep"><h3>Test Prep</h3><p>SAT, ACT, SSAT. Proven strategies & score improvements.</p><a href="#programs" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/3769981/pexels-photo-3769981.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:6px; margin-bottom:16px;" alt="tutoring"><h3>K-12 Tutoring</h3><p>Math, sciences, humanities — individualized plans for every grade.</p><a href="#programs" class="program-link" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:6px; margin-bottom:16px;" alt="music studio"><h3>StudioFive10</h3><p>Music production, coding, digital arts. Creativity meets tech.</p><a href="#programs" class="program-link" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/5212342/pexels-photo-5212342.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:6px; margin-bottom:16px;" alt="test prep"><h3>Test Prep</h3><p>SAT, ACT, SSAT. Proven strategies & score improvements.</p><a href="#programs" class="program-link" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
         </div>
       </div>
-      <!-- Impact stats (realistic) -->
+      <!-- stats -->
       <div class="stats">
         <div class="container stats-grid">
           <div class="stat-item"><h3>580+</h3><p>students tutored</p></div>
@@ -159,7 +173,7 @@
       </div>
     </section>
 
-    <!-- ABOUT section with real team images -->
+    <!-- ABOUT section -->
     <section id="about" class="page-section" style="background:var(--white);">
       <div class="container page-header">
         <h1>About us</h1>
@@ -179,7 +193,7 @@
       </div>
     </section>
 
-    <!-- PROGRAMS SECTION with realistic images -->
+    <!-- PROGRAMS SECTION -->
     <section id="programs" class="page-section">
       <div class="container page-header">
         <h1>Programs & services</h1>
@@ -197,7 +211,7 @@
       </div>
     </section>
 
-    <!-- IMPACT / SUCCESS STORIES with realistic student images -->
+    <!-- IMPACT / SUCCESS STORIES -->
     <section id="impact" class="page-section" style="background:var(--white);">
       <div class="container page-header">
         <h1>Impact & success stories</h1>
@@ -220,7 +234,7 @@
       </div>
     </section>
 
-    <!-- BLOG / RESOURCES with realistic images -->
+    <!-- BLOG / RESOURCES with REPLACED IMAGES for reading habit + summer camp -->
     <section id="blog" class="page-section">
       <div class="container page-header">
         <h1>Blog & resources</h1>
@@ -228,17 +242,19 @@
       </div>
       <div class="container">
         <div class="grid-3">
-          <div class="card"><img src="https://images.pexels.com/photos/8613075/pexels-photo-8613075.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>How to build a reading habit</h3><p>Simple ways to encourage daily reading (even for reluctant readers).</p><a href="#" style="color:var(--primary);">read more →</a></div>
-          <div class="card"><img src="https://images.pexels.com/photos/4377171/pexels-photo-4377171.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>5 free music production tools</h3><p>Start making beats with these free DAWs and synth plugins.</p><a href="#" style="color:var(--primary);">read more →</a></div>
-          <div class="card"><img src="https://images.pexels.com/photos/5212342/pexels-photo-5212342.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>SAT vs. ACT: which is right?</h3><p>Breakdown of format, timing, and how to choose.</p><a href="#" style="color:var(--primary);">read more →</a></div>
-          <div class="card"><img src="https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>StudioFive10 showcase 2025</h3><p>Join us May 20 for student projects & live music.</p><a href="#" style="color:var(--primary);">details →</a></div>
-          <div class="card"><img src="https://images.pexels.com/photos/6347746/pexels-photo-6347746.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>Executive function for teens</h3><p>Strategies to improve planning and focus.</p><a href="#" style="color:var(--primary);">read more →</a></div>
-          <div class="card"><img src="https://images.pexels.com/photos/8613077/pexels-photo-8613077.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>Summer camp guide</h3><p>All our summer offerings (academic + creative).</p><a href="#" style="color:var(--primary);">download PDF →</a></div>
+          <!-- 1) How to build a reading habit -> new AI-relevant image (books/child) -->
+          <div class="card"><img src="https://picsum.photos/id/20/800/600" loading="lazy" style="height:180px; object-fit:cover;" alt="girl reading book"><h3>How to build a reading habit</h3><p>Simple ways to encourage daily reading (even for reluctant readers).</p><a href="#" class="blog-link" style="color:var(--primary);">read more →</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/4377171/pexels-photo-4377171.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>5 free music production tools</h3><p>Start making beats with these free DAWs and synth plugins.</p><a href="#" class="blog-link" style="color:var(--primary);">read more →</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/5212342/pexels-photo-5212342.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>SAT vs. ACT: which is right?</h3><p>Breakdown of format, timing, and how to choose.</p><a href="#" class="blog-link" style="color:var(--primary);">read more →</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>StudioFive10 showcase 2025</h3><p>Join us May 20 for student projects & live music.</p><a href="#" class="blog-link" style="color:var(--primary);">details →</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/6347746/pexels-photo-6347746.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>Executive function for teens</h3><p>Strategies to improve planning and focus.</p><a href="#" class="blog-link" style="color:var(--primary);">read more →</a></div>
+          <!-- 6) Summer camp guide -> replaced with camping / outdoor learning -->
+          <div class="card"><img src="https://picsum.photos/id/133/800/600" loading="lazy" style="height:180px; object-fit:cover;" alt="kids camping summer"><h3>Summer camp guide</h3><p>All our summer offerings (academic + creative).</p><a href="#" class="blog-link" style="color:var(--primary);">download PDF →</a></div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT SECTION with map placeholder replaced by realistic image -->
+    <!-- CONTACT SECTION with working form -->
     <section id="contact" class="page-section" style="background:var(--white);">
       <div class="container page-header">
         <h1>Contact us</h1>
@@ -246,12 +262,12 @@
       </div>
       <div class="container two-col">
         <div class="contact-form">
-          <form action="#" method="post">
-            <div class="form-group"><label>Full name</label><input type="text" placeholder="Alex Johnson" required></div>
-            <div class="form-group"><label>Email</label><input type="email" placeholder="alex@example.com" required></div>
-            <div class="form-group"><label>Program of interest</label><input type="text" placeholder="e.g., Tutoring, StudioFive10"></div>
-            <div class="form-group"><label>Message</label><textarea rows="4" placeholder="Tell us about your learner..."></textarea></div>
-            <button type="submit" class="btn btn-primary">Send message</button>
+          <form id="contactForm" action="#" method="post">
+            <div class="form-group"><label>Full name</label><input type="text" id="nameInput" placeholder="Alex Johnson" required></div>
+            <div class="form-group"><label>Email</label><input type="email" id="emailInput" placeholder="alex@example.com" required></div>
+            <div class="form-group"><label>Program of interest</label><input type="text" id="programInput" placeholder="e.g., Tutoring, StudioFive10"></div>
+            <div class="form-group"><label>Message</label><textarea id="msgInput" rows="4" placeholder="Tell us about your learner..."></textarea></div>
+            <button type="submit" class="btn btn-primary" id="submitContact">Send message</button>
           </form>
         </div>
         <div>
@@ -259,7 +275,6 @@
           <p>123 Learning Avenue, Suite 100<br>Springfield, ST 12345</p>
           <p style="margin:20px 0;">📞 (555) 123-4567<br>✉️ hello@kthfive10.org</p>
           <p><strong>Hours:</strong><br>Mon–Fri 9am–7pm<br>Sat 10am–4pm</p>
-          <!-- realistic street view image instead of generic map -->
           <img src="https://images.pexels.com/photos/6994990/pexels-photo-6994990.jpeg?auto=compress&cs=tinysrgb&w=1260&h=520&dpr=2" alt="our location street view" style="border-radius:16px; margin-top:30px; height:200px; width:100%; object-fit:cover;">
         </div>
       </div>
@@ -271,16 +286,16 @@
       <div class="footer-grid">
         <div><a href="#home" class="footer-logo">KTH + Five10</a><p style="margin-top:16px;color:#ccc;">Empowering the next generation.</p></div>
         <div class="footer-links"><h4>Explore</h4><a href="#about">About</a><a href="#programs">Programs</a><a href="#impact">Impact</a><a href="#blog">Blog</a></div>
-        <div class="footer-links"><h4>Support</h4><a href="#contact">Contact</a><a href="#">FAQ</a><a href="#">Enroll</a></div>
+        <div class="footer-links"><h4>Support</h4><a href="#contact">Contact</a><a href="#" id="faqLink">FAQ</a><a href="#" id="enrollFooterLink">Enroll</a></div>
         <div><h4>Connect</h4><p>hello@kthfive10.org<br>(555) 123-4567</p><div style="display:flex; gap:16px; margin-top:16px;"><span style="color:#ccc;">📘</span><span style="color:#ccc;">📷</span><span style="color:#ccc;">🐦</span></div></div>
       </div>
       <div class="copyright"><p>© 2025 KTH Learning & StudioFive10. All rights reserved.</p></div>
     </div>
   </footer>
 
-  <!-- improved JS: active nav highlight + mobile toggle -->
   <script>
     (function() {
+      // mobile toggle
       const toggle = document.getElementById('mobile-toggle');
       const menu = document.getElementById('nav-menu');
       if (toggle && menu) {
@@ -292,7 +307,8 @@
           link.addEventListener('click', () => menu.classList.remove('active'));
         });
       }
-      // active nav highlight on scroll
+
+      // active nav highlight
       const sections = document.querySelectorAll('.page-section');
       const navLinks = document.querySelectorAll('.nav-menu a');
       function setActive() {
@@ -313,8 +329,50 @@
       }
       window.addEventListener('scroll', setActive);
       window.addEventListener('load', setActive);
+
+      // MODAL functionality (dummy success)
+      const modal = document.getElementById('successModal');
+      const closeBtn = document.getElementById('closeModalBtn');
+      function showModal() { modal.style.display = 'flex'; }
+      function hideModal() { modal.style.display = 'none'; }
+
+      // Enroll button (header + footer)
+      document.getElementById('enrollNowBtn').addEventListener('click', function(e) {
+        e.preventDefault(); showModal();
+      });
+      const enrollFooter = document.getElementById('enrollFooterLink');
+      if(enrollFooter) enrollFooter.addEventListener('click', function(e){ e.preventDefault(); showModal(); });
+
+      // FAQ link dummy
+      document.getElementById('faqLink').addEventListener('click', function(e){ e.preventDefault(); alert('FAQ page would open here. (dummy)'); });
+
+      // Contact form submission
+      const contactForm = document.getElementById('contactForm');
+      if(contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          showModal();
+          contactForm.reset();
+        });
+      }
+
+      // "Learn more" program links & blog links
+      document.querySelectorAll('.program-link, .blog-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          if(this.getAttribute('href') === '#programs') {
+            e.preventDefault();
+            document.getElementById('programs').scrollIntoView({behavior:'smooth'});
+          } else if (this.getAttribute('href') === '#') {
+            e.preventDefault();
+            alert('Blog post preview (dummy data) — full article would open.');
+          }
+        });
+      });
+
+      // close modal
+      if(closeBtn) closeBtn.addEventListener('click', hideModal);
+      window.addEventListener('click', (e) => { if(e.target === modal) hideModal(); });
     })();
   </script>
-  <!-- all images now from pexels (free, realistic, education-related) no placeholder 920x600 remains -->
 </body>
 </html>
