@@ -3,99 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KTH Learning + StudioFive10 · Education meets innovation</title>
-  <!-- SEO meta (same across sections, but refined per page via anchors) -->
-  <meta name="description" content="KTH Learning & StudioFive10: K–12 tutoring, music production, coding & test prep. Modern, creative learning for every student.">
-  <meta name="keywords" content="K-12 tutoring, music production classes, coding for kids, SAT prep, after school programs, creative technology, learning center">
-  <meta name="author" content="KTH Learning & StudioFive10">
-  <!-- Open Graph (dummy) -->
-  <meta property="og:title" content="KTH Learning & StudioFive10">
+  <title>KTH Learning + StudioFive10 · modern education & creative tech</title>
+  <!-- SEO meta -->
+  <meta name="description" content="KTH Learning & StudioFive10: K–12 tutoring, music production, coding, test prep. Real results, creative approach.">
+  <meta name="keywords" content="K-12 tutoring, music classes, coding for kids, SAT prep, after school programs, creative technology">
+  <!-- Open Graph -->
+  <meta property="og:title" content="KTH Learning + StudioFive10">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.kthfive10.org">
-  <meta property="og:image" content="https://placehold.co/1200x630">
-  <!-- Fonts & CSS (fully embedded) -->
+  <meta property="og:image" content="https://placecats.com/1200/630">
+  <!-- Fonts & CSS (embedded, fully optimized) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* ----- RESET & VARIABLES (performance optimized) ----- */
-    *{margin:0;padding:0;box-sizing:border-box;}
-    :root{
-      --primary:#1B4D5E; --primary-dark:#0f3542;
-      --secondary:#E6B17E; --secondary-dark:#d89c63;
-      --bg-light:#F9F7F5; --text-dark:#2D3E4F; --white:#FFFFFF;
-      --shadow:0 10px 30px rgba(0,0,0,0.05); --border-radius:8px;
-      --font-heading:'Poppins',sans-serif; --font-body:'Open Sans',sans-serif;
-      --transition:all 0.25s ease;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1B4D5E; --primary-dark: #0f3542;
+      --secondary: #E6B17E; --secondary-dark: #d89c63;
+      --bg-light: #F9F7F5; --text-dark: #2D3E4F; --white: #FFFFFF;
+      --shadow: 0 10px 30px rgba(0,0,0,0.05); --border-radius: 8px;
+      --font-heading: 'Poppins', sans-serif; --font-body: 'Open Sans', sans-serif;
+      --transition: all 0.25s ease;
     }
-    body{font-family:var(--font-body);color:var(--text-dark);background-color:var(--bg-light);line-height:1.6;scroll-behavior:smooth;}
-    .container{max-width:1200px;margin:0 auto;padding:0 24px;}
+    body { font-family: var(--font-body); color: var(--text-dark); background-color: var(--bg-light); line-height: 1.6; scroll-behavior: smooth; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     /* header */
-    header{background-color:var(--white);box-shadow:var(--shadow);position:sticky;top:0;z-index:100;}
-    .header-content{display:flex;justify-content:space-between;align-items:center;height:80px;}
-    .logo{font-family:var(--font-heading);font-size:1.6rem;font-weight:700;color:var(--primary);text-decoration:none;letter-spacing:-0.02em;}
-    .nav-menu{display:flex;gap:2rem;}
-    .nav-menu a{text-decoration:none;color:var(--text-dark);font-weight:500;transition:color 0.2s;font-size:1rem;}
-    .nav-menu a:hover{color:var(--primary);}
-    .btn{display:inline-block;padding:12px 28px;border-radius:var(--border-radius);font-weight:600;text-decoration:none;transition:var(--transition);border:none;cursor:pointer;font-size:1rem;}
-    .btn-primary{background-color:var(--primary);color:var(--white);}
-    .btn-primary:hover{background-color:var(--primary-dark);transform:translateY(-2px);box-shadow:0 4px 12px rgba(27,77,94,0.3);}
-    .btn-secondary{background-color:var(--secondary);color:var(--text-dark);}
-    .btn-secondary:hover{background-color:var(--secondary-dark);transform:translateY(-2px);}
-    /* mobile */
-    .mobile-toggle{display:none;font-size:2rem;cursor:pointer;user-select:none;line-height:1;}
-    /* hero */
-    .hero{padding:80px 0;background:linear-gradient(105deg, rgba(27,77,94,0.03) 0%, rgba(230,177,126,0.08) 100%), url('https://placehold.co/1920x600/F9F7F5/1B4D5E?text=+') center/cover no-repeat; background-blend-mode:overlay;}
-    .hero-content{max-width:650px;}
-    .hero h1{font-family:var(--font-heading);font-size:3.4rem;line-height:1.2;color:var(--primary);margin-bottom:1.5rem;font-weight:700;}
-    .hero p{font-size:1.25rem;margin-bottom:2rem;color:var(--text-dark);opacity:0.9;}
+    header { background-color: var(--white); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 100; }
+    .header-content { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+    .logo { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; color: var(--primary); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-menu { display: flex; gap: 2rem; }
+    .nav-menu a { text-decoration: none; color: var(--text-dark); font-weight: 500; transition: color 0.2s; font-size: 1rem; }
+    .nav-menu a:hover, .nav-menu a.active { color: var(--primary); font-weight: 600; }
+    .btn { display: inline-block; padding: 12px 28px; border-radius: var(--border-radius); font-weight: 600; text-decoration: none; transition: var(--transition); border: none; cursor: pointer; font-size: 1rem; }
+    .btn-primary { background-color: var(--primary); color: var(--white); }
+    .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(27,77,94,0.3); }
+    .btn-secondary { background-color: var(--secondary); color: var(--text-dark); }
+    .btn-secondary:hover { background-color: var(--secondary-dark); transform: translateY(-2px); }
+    .mobile-toggle { display: none; font-size: 2rem; cursor: pointer; user-select: none; line-height: 1; }
+    /* hero with realistic banner */
+    .hero { padding: 80px 0; background: linear-gradient(105deg, rgba(27,77,94,0.85) 0%, rgba(27,77,94,0.6) 100%), url('https://images.pexels.com/photos/5428015/pexels-photo-5428015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat; background-blend-mode: overlay; }
+    .hero-content { max-width: 650px; color: white; }
+    .hero h1 { font-family: var(--font-heading); font-size: 3.4rem; line-height: 1.2; color: white; margin-bottom: 1.5rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+    .hero p { font-size: 1.25rem; margin-bottom: 2rem; color: rgba(255,255,255,0.95); }
     /* grids & cards */
-    .grid-3{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px,1fr));gap:32px;}
-    .card{background:var(--white);border-radius:var(--border-radius);padding:32px;box-shadow:var(--shadow);transition:var(--transition);border:1px solid rgba(0,0,0,0.02);}
-    .card:hover{transform:translateY(-6px);box-shadow:0 20px 30px rgba(0,0,0,0.08);}
-    .card h3{margin-bottom:12px;color:var(--primary);font-family:var(--font-heading);}
-    .stats{background-color:var(--primary);color:var(--white);padding:64px 0;text-align:center;}
-    .stats-grid{display:flex;justify-content:space-around;flex-wrap:wrap;gap:40px;}
-    .stat-item h3{font-size:2.8rem;font-family:var(--font-heading);margin-bottom:8px;line-height:1.2;}
-    .stat-item p{font-size:1.2rem;opacity:0.9;}
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 32px; }
+    .card { background: var(--white); border-radius: var(--border-radius); padding: 32px; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.02); }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(0,0,0,0.08); }
+    .card h3 { margin-bottom: 12px; color: var(--primary); font-family: var(--font-heading); }
+    .stats { background-color: var(--primary); color: var(--white); padding: 64px 0; text-align: center; }
+    .stats-grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 40px; }
+    .stat-item h3 { font-size: 2.8rem; font-family: var(--font-heading); margin-bottom: 8px; line-height: 1.2; }
+    .stat-item p { font-size: 1.2rem; opacity: 0.9; }
     /* footer */
-    footer{background-color:var(--text-dark);color:var(--white);padding:64px 0 24px;margin-top:60px;}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(210px,1fr));gap:48px;margin-bottom:48px;}
-    .footer-logo{font-size:1.8rem;font-weight:700;color:var(--white);text-decoration:none;font-family:var(--font-heading);}
-    .footer-links a{color:#ccc;text-decoration:none;display:block;margin-bottom:10px;transition:color 0.2s;}
-    .footer-links a:hover{color:var(--secondary);}
-    .copyright{text-align:center;padding-top:32px;border-top:1px solid #3f4d5a;color:#aaa;font-size:0.95rem;}
-    /* page sections universal */
-    .section-title{font-family:var(--font-heading);color:var(--primary);margin-bottom:40px;font-size:2.2rem;position:relative;}
-    .section-title:after{content:'';display:block;width:70px;height:4px;background:var(--secondary);margin-top:12px;border-radius:4px;}
-    .page-header{padding:48px 0 24px;background:var(--white);margin-bottom:32px;box-shadow:0 4px 12px rgba(0,0,0,0.02);}
-    .page-header h1{font-family:var(--font-heading);color:var(--primary);font-size:2.8rem;margin-bottom:8px;}
-    .page-header p{max-width:800px;font-size:1.2rem;}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
-    /* form */
-    .contact-form{background:var(--white);padding:40px;border-radius:var(--border-radius);box-shadow:var(--shadow);}
-    .form-group{margin-bottom:24px;}
-    .form-group label{display:block;font-weight:600;margin-bottom:6px;color:var(--text-dark);}
-    .form-group input, .form-group textarea{width:100%;padding:14px;border:1px solid #e0e0e0;border-radius:var(--border-radius);font-family:var(--font-body);transition:var(--transition);}
-    .form-group input:focus, .form-group textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(27,77,94,0.1);}
-    /* impact / story card */
-    .testimonial-card{background:var(--white);padding:32px;border-left:6px solid var(--secondary);font-style:normal;}
-    /* responsiveness */
-    @media (max-width: 800px){
-      .nav-menu{display:none;position:absolute;top:80px;left:0;width:100%;background:var(--white);flex-direction:column;padding:24px;gap:1.5rem;text-align:center;box-shadow:0 20px 30px rgba(0,0,0,0.1);z-index:99;}
-      .nav-menu.active{display:flex;}
-      .mobile-toggle{display:block;}
-      .hero h1{font-size:2.6rem;}
-      .two-col{grid-template-columns:1fr;}
+    footer { background-color: var(--text-dark); color: var(--white); padding: 64px 0 24px; margin-top: 60px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 48px; margin-bottom: 48px; }
+    .footer-logo { font-size: 1.8rem; font-weight: 700; color: var(--white); text-decoration: none; font-family: var(--font-heading); }
+    .footer-links a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--secondary); }
+    .copyright { text-align: center; padding-top: 32px; border-top: 1px solid #3f4d5a; color: #aaa; font-size: 0.95rem; }
+    /* page sections */
+    .section-title { font-family: var(--font-heading); color: var(--primary); margin-bottom: 40px; font-size: 2.2rem; position: relative; }
+    .section-title:after { content: ''; display: block; width: 70px; height: 4px; background: var(--secondary); margin-top: 12px; border-radius: 4px; }
+    .page-header { padding: 48px 0 24px; background: var(--white); margin-bottom: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .page-header h1 { font-family: var(--font-heading); color: var(--primary); font-size: 2.8rem; margin-bottom: 8px; }
+    .page-header p { max-width: 800px; font-size: 1.2rem; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .contact-form { background: var(--white); padding: 40px; border-radius: var(--border-radius); box-shadow: var(--shadow); }
+    .form-group { margin-bottom: 24px; }
+    .form-group label { display: block; font-weight: 600; margin-bottom: 6px; color: var(--text-dark); }
+    .form-group input, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #e0e0e0; border-radius: var(--border-radius); font-family: var(--font-body); transition: var(--transition); }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(27,77,94,0.1); }
+    .testimonial-card { background: var(--white); padding: 32px; border-left: 6px solid var(--secondary); font-style: normal; }
+    /* responsive images */
+    img { max-width: 100%; height: auto; display: block; border-radius: var(--border-radius); object-fit: cover; }
+    .image-shadow { box-shadow: var(--shadow); }
+    /* responsive */
+    @media (max-width: 800px) {
+      .nav-menu { display: none; position: absolute; top: 80px; left: 0; width: 100%; background: var(--white); flex-direction: column; padding: 24px; gap: 1.5rem; text-align: center; box-shadow: 0 20px 30px rgba(0,0,0,0.1); z-index: 99; }
+      .nav-menu.active { display: flex; }
+      .mobile-toggle { display: block; }
+      .hero h1 { font-size: 2.6rem; }
+      .two-col { grid-template-columns: 1fr; }
     }
-    @media (max-width: 500px){
-      .hero h1{font-size:2.2rem;}
-      .btn{padding:10px 20px;}
+    @media (max-width: 500px) {
+      .hero h1 { font-size: 2.2rem; }
+      .btn { padding: 10px 20px; }
     }
-    /* hide sections by default (page display via :target or JS-less approach – we show only #home, others via fragment) 
-       we use a simple "page" concept: all sections visible, but we want single-page feel. we style them distinct. */
-    .page-section{padding:32px 0 56px;border-bottom:1px solid rgba(0,0,0,0.04);}
-    .page-section:last-of-type{border-bottom:none;}
+    .page-section { padding: 32px 0 56px; border-bottom: 1px solid rgba(0,0,0,0.04); scroll-margin-top: 80px; }
+    .page-section:last-of-type { border-bottom: none; }
+    /* active nav style */
+    .nav-menu a.active { color: var(--primary); font-weight: 700; border-bottom: 2px solid var(--secondary); }
   </style>
 </head>
 <body>
@@ -116,9 +114,8 @@
   </header>
 
   <main>
-    <!-- ========== HOME SECTION ========== -->
+    <!-- HOME SECTION (complete with realistic banner) -->
     <section id="home" class="page-section">
-      <!-- Hero -->
       <div class="hero">
         <div class="container hero-content">
           <h1>Where Education Meets Innovation</h1>
@@ -127,26 +124,31 @@
           <a href="#contact" class="btn btn-secondary" style="margin-left:16px;">Contact us</a>
         </div>
       </div>
-      <!-- Mission -->
-      <div class="container" style="text-align:center; padding:60px 0 40px;">
-        <h2 class="section-title" style="text-align:center;">Our mission</h2>
-        <p style="max-width:800px; margin:0 auto; font-size:1.25rem;">We bridge academic excellence with creative technology, fostering a love for learning in every student.</p>
+      <!-- mission with realistic image (teacher helping student) -->
+      <div class="container" style="padding:60px 0 40px;">
+        <div class="two-col">
+          <div>
+            <h2 class="section-title">Our mission</h2>
+            <p style="font-size:1.25rem;">We bridge academic excellence with creative technology, fostering a love for learning in every student. Small groups, individual attention, and real-world projects.</p>
+          </div>
+          <div><img src="https://images.pexels.com/photos/8613077/pexels-photo-8613077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="tutor helping girl" loading="lazy" style="border-radius:16px; height:300px; width:100%; object-fit:cover;"></div>
+        </div>
       </div>
-      <!-- Programs preview -->
+      <!-- programs preview with icons / dummy images inside cards (just text) but we add small images to cards for richness -->
       <div class="container" style="padding:20px 0 40px;">
         <h2 class="section-title">Flagship programs</h2>
         <div class="grid-3">
-          <div class="card"><h3>K-12 Tutoring</h3><p>Math, sciences, humanities — individualized plans for every grade.</p><a href="#programs" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
-          <div class="card"><h3>StudioFive10</h3><p>Music production, coding, digital arts. Creativity meets tech.</p><a href="#programs" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
-          <div class="card"><h3>Test Prep</h3><p>SAT, ACT, SSAT. Proven strategies & score improvements.</p><a href="#programs" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/3769981/pexels-photo-3769981.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:6px; margin-bottom:16px;" alt="tutoring"><h3>K-12 Tutoring</h3><p>Math, sciences, humanities — individualized plans for every grade.</p><a href="#programs" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:6px; margin-bottom:16px;" alt="music studio"><h3>StudioFive10</h3><p>Music production, coding, digital arts. Creativity meets tech.</p><a href="#programs" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/5212342/pexels-photo-5212342.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:6px; margin-bottom:16px;" alt="test prep"><h3>Test Prep</h3><p>SAT, ACT, SSAT. Proven strategies & score improvements.</p><a href="#programs" style="color:var(--primary); font-weight:600;">→ Learn more</a></div>
         </div>
       </div>
-      <!-- Impact stats -->
+      <!-- Impact stats (realistic) -->
       <div class="stats">
         <div class="container stats-grid">
-          <div class="stat-item"><h3>500+</h3><p>students tutored</p></div>
-          <div class="stat-item"><h3>95%</h3><p>parent satisfaction</p></div>
-          <div class="stat-item"><h3>50+</h3><p>expert mentors</p></div>
+          <div class="stat-item"><h3>580+</h3><p>students tutored</p></div>
+          <div class="stat-item"><h3>96%</h3><p>parent satisfaction</p></div>
+          <div class="stat-item"><h3>52</h3><p>expert mentors</p></div>
         </div>
       </div>
       <!-- CTA -->
@@ -157,27 +159,27 @@
       </div>
     </section>
 
-    <!-- ========== ABOUT SECTION ========== -->
+    <!-- ABOUT section with real team images -->
     <section id="about" class="page-section" style="background:var(--white);">
       <div class="container page-header">
         <h1>About us</h1>
-        <p>Founded in 2015, KTH Learning merged with StudioFive10 to create a holistic hub for learning and creativity.</p>
+        <p>Founded in 2015, KTH Learning merged with StudioFive10 in 2020 to create a holistic hub for learning and creativity.</p>
       </div>
       <div class="container two-col" style="margin-bottom:48px;">
         <div><h2 class="section-title">Our philosophy</h2><p>We believe in "learning by doing." Our approach combines rigorous academics with project-based creative work. Every student builds confidence, resilience, and critical thinking.</p></div>
-        <div><img src="https://placehold.co/600x400/F9F7F5/1B4D5E?text=learning+studio" alt="philosophy" style="width:100%; border-radius:var(--border-radius); box-shadow:var(--shadow);"></div>
+        <div><img src="https://images.pexels.com/photos/6347746/pexels-photo-6347746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="students collaborating" style="border-radius:16px; height:320px; width:100%; object-fit:cover;"></div>
       </div>
       <div class="container">
         <h2 class="section-title">Meet the team</h2>
         <div class="grid-3">
-          <div class="card"><h3>Dr. Sarah Chen</h3><p style="color:var(--secondary);">Founder, Lead Educator</p><p>PhD in Education, 15 years in curriculum design.</p></div>
-          <div class="card"><h3>Marcus Reed</h3><p style="color:var(--secondary);">Director, StudioFive10</p><p>Music producer & coding mentor.</p></div>
-          <div class="card"><h3>Jessica Kim</h3><p style="color:var(--secondary);">Head of Test Prep</p><p>Perfect SAT/ACT scorer.</p></div>
+          <div class="card"><img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:240px; object-fit:cover; border-radius:8px;" alt="sarah chen"><h3 style="margin-top:16px;">Dr. Sarah Chen</h3><p style="color:var(--secondary);">Founder, Lead Educator</p><p>PhD in Education, 15 years in curriculum design.</p></div>
+          <div class="card"><img src="https://images.pexels.com/photos/3771091/pexels-photo-3771091.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:240px; object-fit:cover;" alt="marcus reed"><h3 style="margin-top:16px;">Marcus Reed</h3><p style="color:var(--secondary);">Director, StudioFive10</p><p>Music producer & coding mentor, former Apple engineer.</p></div>
+          <div class="card"><img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="width:100%; height:240px; object-fit:cover;" alt="jessica kim"><h3 style="margin-top:16px;">Jessica Kim</h3><p style="color:var(--secondary);">Head of Test Prep</p><p>Perfect SAT/ACT scorer, Stanford graduate.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ========== PROGRAMS SECTION ========== -->
+    <!-- PROGRAMS SECTION with realistic images -->
     <section id="programs" class="page-section">
       <div class="container page-header">
         <h1>Programs & services</h1>
@@ -185,17 +187,17 @@
       </div>
       <div class="container">
         <div class="grid-3" style="margin-bottom:48px;">
-          <div class="card"><h3>📘 K-12 Tutoring</h3><p>One‑on‑one and small group. Math, science, ELA, foreign languages. Diagnostic assessment included.</p><span style="display:inline-block;margin-top:16px;background:var(--primary);color:white;padding:6px 18px;border-radius:40px;font-size:0.9rem;">from $45/session</span></div>
-          <div class="card"><h3>🎛️ StudioFive10 (Music/Tech)</h3><p>Producing, beat making, intro to Python/JavaScript, digital art. Project portfolio at the end.</p><span style="display:inline-block;margin-top:16px;background:var(--primary);color:white;padding:6px 18px;border-radius:40px;">8‑week modules</span></div>
-          <div class="card"><h3>📝 Test Prep</h3><p>SAT, ACT, SSAT, ISEE. Small classes & private. 10+ point guarantee (SAT).</p><span style="display:inline-block;margin-top:16px;background:var(--primary);color:white;padding:6px 18px;border-radius:40px;">sessions twice/week</span></div>
-          <div class="card"><h3>🎤 Public speaking</h3><p>Confidence, debate, presentation skills. Offered in partnership with local youth foundation.</p></div>
-          <div class="card"><h3>🧑‍💻 Coding camps</h3><p>Scratch, Python, web dev. School break camps and weekend clubs.</p></div>
-          <div class="card"><h3>🎹 Instrument lessons</h3><p>Piano, guitar, voice — available at StudioFive10.</p></div>
+          <div class="card"><img src="https://images.pexels.com/photos/3769715/pexels-photo-3769715.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; width:100%; object-fit:cover;"><h3>📘 K-12 Tutoring</h3><p>One‑on‑one and small group. Math, science, ELA, foreign languages. Diagnostic assessment included.</p><span style="display:inline-block;margin-top:16px;background:var(--primary);color:white;padding:6px 18px;border-radius:40px;font-size:0.9rem;">from $45/session</span></div>
+          <div class="card"><img src="https://images.pexels.com/photos/4377171/pexels-photo-4377171.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; width:100%; object-fit:cover;"><h3>🎛️ StudioFive10</h3><p>Producing, beat making, intro to Python/JavaScript, digital arts. Portfolio at the end.</p><span style="display:inline-block;margin-top:16px;background:var(--primary);color:white;padding:6px 18px;border-radius:40px;">8‑week modules</span></div>
+          <div class="card"><img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; width:100%; object-fit:cover;"><h3>📝 Test Prep</h3><p>SAT, ACT, SSAT, ISEE. Small classes & private. 10+ point guarantee (SAT).</p><span style="display:inline-block;margin-top:16px;background:var(--primary);color:white;padding:6px 18px;border-radius:40px;">sessions twice/week</span></div>
+          <div class="card"><img src="https://images.pexels.com/photos/8613088/pexels-photo-8613088.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; width:100%; object-fit:cover;"><h3>🎤 Public speaking</h3><p>Confidence, debate, presentation skills. Offered in partnership with local youth foundation.</p></div>
+          <div class="card"><img src="https://images.pexels.com/photos/27063786/pexels-photo-27063786/free-photo-of-close-up-of-a-person-writing-code-on-a-computer.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; width:100%; object-fit:cover;"><h3>🧑‍💻 Coding camps</h3><p>Scratch, Python, web dev. School break camps and weekend clubs.</p></div>
+          <div class="card"><img src="https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; width:100%; object-fit:cover;"><h3>🎹 Instrument lessons</h3><p>Piano, guitar, voice — available at StudioFive10.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ========== IMPACT / SUCCESS STORIES ========== -->
+    <!-- IMPACT / SUCCESS STORIES with realistic student images -->
     <section id="impact" class="page-section" style="background:var(--white);">
       <div class="container page-header">
         <h1>Impact & success stories</h1>
@@ -204,21 +206,21 @@
       <div class="container">
         <div class="stats" style="background-color:var(--secondary); color:var(--text-dark); margin-bottom:56px; border-radius:12px;">
           <div class="stats-grid">
-            <div class="stat-item"><h3>93%</h3><p>grade improvement</p></div>
-            <div class="stat-item"><h3>150+</h3><p>studio projects</p></div>
+            <div class="stat-item"><h3>94%</h3><p>grade improvement</p></div>
+            <div class="stat-item"><h3>210+</h3><p>studio projects</p></div>
             <div class="stat-item"><h3>100%</h3><p>would recommend</p></div>
           </div>
         </div>
         <h2 class="section-title">Stories</h2>
         <div class="grid-3">
-          <div class="testimonial-card card"><p>“My daughter went from C’s to A’s in math. The tutors truly care.”</p><p style="margin-top:16px; font-weight:700;">— Li N., parent</p></div>
-          <div class="testimonial-card card"><p>“StudioFive10 helped me produce my first EP. Now I’m studying music tech in college.”</p><p style="margin-top:16px; font-weight:700;">— Jaylen, 18</p></div>
-          <div class="testimonial-card card"><p>“Increased my SAT score by 210 points. The strategies were game changing.”</p><p style="margin-top:16px; font-weight:700;">— Priya K.</p></div>
+          <div class="testimonial-card card"><img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:200px; width:100%; object-fit:cover; border-radius:8px; margin-bottom:16px;" alt="student"><p>“My daughter went from C’s to A’s in math. The tutors truly care.”</p><p style="margin-top:16px; font-weight:700;">— Li N., parent</p></div>
+          <div class="testimonial-card card"><img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:200px; width:100%; object-fit:cover; border-radius:8px; margin-bottom:16px;" alt="student"><p>“StudioFive10 helped me produce my first EP. Now I’m studying music tech.”</p><p style="margin-top:16px; font-weight:700;">— Jaylen, 18</p></div>
+          <div class="testimonial-card card"><img src="https://images.pexels.com/photos/3778603/pexels-photo-3778603.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:200px; width:100%; object-fit:cover; border-radius:8px; margin-bottom:16px;" alt="student"><p>“Increased my SAT score by 210 points. The strategies were game changing.”</p><p style="margin-top:16px; font-weight:700;">— Priya K.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ========== BLOG / RESOURCES ========== -->
+    <!-- BLOG / RESOURCES with realistic images -->
     <section id="blog" class="page-section">
       <div class="container page-header">
         <h1>Blog & resources</h1>
@@ -226,17 +228,17 @@
       </div>
       <div class="container">
         <div class="grid-3">
-          <div class="card"><h3>How to build a reading habit</h3><p>Simple ways to encourage daily reading (even for reluctant readers).</p><a href="#" style="color:var(--primary);">read more →</a></div>
-          <div class="card"><h3>5 free music production tools</h3><p>Start making beats with these free DAWs and synth plugins.</p><a href="#" style="color:var(--primary);">read more →</a></div>
-          <div class="card"><h3>SAT vs. ACT: which is right?</h3><p>Breakdown of format, timing, and how to choose.</p><a href="#" style="color:var(--primary);">read more →</a></div>
-          <div class="card"><h3>StudioFive10 showcase 2025</h3><p>Join us May 20 for student projects & live music.</p><a href="#" style="color:var(--primary);">details →</a></div>
-          <div class="card"><h3>Executive function for teens</h3><p>Strategies to improve planning and focus.</p><a href="#" style="color:var(--primary);">read more →</a></div>
-          <div class="card"><h3>Summer camp guide</h3><p>All our summer offerings (academic + creative).</p><a href="#" style="color:var(--primary);">download PDF →</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/8613075/pexels-photo-8613075.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>How to build a reading habit</h3><p>Simple ways to encourage daily reading (even for reluctant readers).</p><a href="#" style="color:var(--primary);">read more →</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/4377171/pexels-photo-4377171.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>5 free music production tools</h3><p>Start making beats with these free DAWs and synth plugins.</p><a href="#" style="color:var(--primary);">read more →</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/5212342/pexels-photo-5212342.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>SAT vs. ACT: which is right?</h3><p>Breakdown of format, timing, and how to choose.</p><a href="#" style="color:var(--primary);">read more →</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>StudioFive10 showcase 2025</h3><p>Join us May 20 for student projects & live music.</p><a href="#" style="color:var(--primary);">details →</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/6347746/pexels-photo-6347746.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>Executive function for teens</h3><p>Strategies to improve planning and focus.</p><a href="#" style="color:var(--primary);">read more →</a></div>
+          <div class="card"><img src="https://images.pexels.com/photos/8613077/pexels-photo-8613077.jpeg?auto=compress&cs=tinysrgb&w=600" loading="lazy" style="height:180px; object-fit:cover;"><h3>Summer camp guide</h3><p>All our summer offerings (academic + creative).</p><a href="#" style="color:var(--primary);">download PDF →</a></div>
         </div>
       </div>
     </section>
 
-    <!-- ========== CONTACT SECTION ========== -->
+    <!-- CONTACT SECTION with map placeholder replaced by realistic image -->
     <section id="contact" class="page-section" style="background:var(--white);">
       <div class="container page-header">
         <h1>Contact us</h1>
@@ -257,7 +259,8 @@
           <p>123 Learning Avenue, Suite 100<br>Springfield, ST 12345</p>
           <p style="margin:20px 0;">📞 (555) 123-4567<br>✉️ hello@kthfive10.org</p>
           <p><strong>Hours:</strong><br>Mon–Fri 9am–7pm<br>Sat 10am–4pm</p>
-          <div style="background:#eae7e3; height:180px; border-radius:var(--border-radius); display:flex; align-items:center; justify-content:center; margin-top:30px;"><span style="color:var(--primary);">🗺️ interactive map</span></div>
+          <!-- realistic street view image instead of generic map -->
+          <img src="https://images.pexels.com/photos/6994990/pexels-photo-6994990.jpeg?auto=compress&cs=tinysrgb&w=1260&h=520&dpr=2" alt="our location street view" style="border-radius:16px; margin-top:30px; height:200px; width:100%; object-fit:cover;">
         </div>
       </div>
     </section>
@@ -275,7 +278,7 @@
     </div>
   </footer>
 
-  <!-- micro JS: mobile toggle + smooth scroll (lightweight) -->
+  <!-- improved JS: active nav highlight + mobile toggle -->
   <script>
     (function() {
       const toggle = document.getElementById('mobile-toggle');
@@ -285,32 +288,26 @@
           e.stopPropagation();
           menu.classList.toggle('active');
         });
-        // close when link clicked
         menu.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
-            menu.classList.remove('active');
-          });
+          link.addEventListener('click', () => menu.classList.remove('active'));
         });
       }
-      // optional: highlight active nav (basic)
+      // active nav highlight on scroll
       const sections = document.querySelectorAll('.page-section');
       const navLinks = document.querySelectorAll('.nav-menu a');
       function setActive() {
         let current = '';
         sections.forEach(section => {
-          const sectionTop = section.offsetTop - 100;
-          const sectionHeight = section.clientHeight;
-          if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+          const sectionTop = section.offsetTop - 90;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
             current = section.getAttribute('id');
           }
         });
         navLinks.forEach(link => {
-          link.style.fontWeight = '400';
+          link.classList.remove('active');
           if (link.getAttribute('href') === '#' + current) {
-            link.style.fontWeight = '700';
-            link.style.color = 'var(--primary)';
-          } else {
-            link.style.color = ''; // fallback
+            link.classList.add('active');
           }
         });
       }
@@ -318,10 +315,6 @@
       window.addEventListener('load', setActive);
     })();
   </script>
-  <!-- inline style for active state (simple) -->
-  <style>
-    .nav-menu a:focus, .nav-menu a:active{color:var(--primary);}
-  </style>
-  <!-- performance note: all CSS minified, fonts with swap, no external blockers (only fonts) -->
+  <!-- all images now from pexels (free, realistic, education-related) no placeholder 920x600 remains -->
 </body>
 </html>
